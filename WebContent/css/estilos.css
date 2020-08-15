@@ -1,0 +1,152 @@
+body{
+	font-family: "Calibri";
+}
+a, a:link, a:visited, a:hover {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #000;
+	font-family: "Calibri";
+}
+
+img .icone {
+	border: 0px;
+}
+
+/* Login */
+#paginaLogin {
+	margin-top: 100px;
+	height: 80%;				
+	margin auto;
+	text-align: center;
+}
+#formularioLogin, #mensagemLogout {
+	color: white;
+	width: 968px;
+	height: 199px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 20px;
+	font-family: "Verdana";
+}
+.erro {
+	color: red;
+	font-size: 20px;
+	font-family: "Tahoma";
+}
+
+.alertaExclusao {
+	color: darkred;
+	font-weight: bold;
+	font-size: 25px;
+}
+
+/* Geral */
+#pagina {
+	background-color: darkorange;
+	padding: 15px 5px 15px 5px;
+	width: 990px;
+	margin-left: auto;
+	margin-right: auto;
+	-moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -khtml-border-radius: 20px;
+    border-radius: 20px;
+}
+#topo {
+	width: 968px;
+	height: 199px;
+	margin-left: auto;
+	margin-right: auto;
+	background-image: url("../img/logo.png");
+	background-repeat: no-repeat;
+	color: #FFF;
+	text-align: right;
+	vertical-align: baseline;
+	text-transform: uppercase;
+}
+#menu {
+	width: 968px;
+	height: 36px;
+	margin-left: auto;
+	margin-right: auto;
+	background-image: url("../img/fundo_cinza_2.png");
+	background-repeat: repeat-x;
+	vertical-align: middle;
+	font-size: 20px;
+	font-weight: bold;
+}
+#corpo {
+	width: 968px;
+	min-height: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #FFF;				
+}
+#conteudo{
+	margin-left: 20px;	
+}
+/*
+#rodape {
+	width: 968px;
+	height: 29px;
+	margin-left: auto;
+	margin-right: auto;
+	background-image: url("../img/fundo_rodape.png");
+	text-align: center;
+	font-size: 12px;
+}
+*/
+.identificacao_topo {
+	padding-right: 15px;
+	padding-top: 15px;				
+	font-size: 12px;	
+}
+.menu_, .menu_nivel_1, .menu_nivel_0, .menu_nivel_2 {
+	float:left;
+	height:36px;
+	min-width: 120px;
+	text-align: center;
+	padding-left: 10px;
+}
+
+.menu_:hover, .menu_nivel_2:hover {
+	background-image: url("../img/fundo_menu_escuro_3.png");												
+}			
+.menu_nivel_1:hover {
+	background-image: url("../img/fundo_menu_amarelo_2.png");								
+}			
+.menu_nivel_0:hover {
+	background-image: url("../img/fundo_menu_azul_2.png");								
+}
+.msgSucesso {
+	color: darkblue;
+	font-size: 20px;
+	font-weight: bold;
+}
+.msgSucesso {
+	color: darkblue;
+	font-size: 20px;
+	font-weight: bold;
+}
+.msgFalha {
+	color: darkred;
+	font-size: 18px;
+	font-weight: bold;
+}
+.tituloPagina{
+	font-size: 25px;
+	font-weight: bold;
+}
+
+/* Usuarios */
+
+#tabela {
+	width: 90%;	
+}
+.linhaSombreada, .linhaSombreadaSelecionada:hover {
+	background-color: #ECECEC;
+}
+
+#filtro {
+	width: 95%;
+}
