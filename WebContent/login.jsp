@@ -34,14 +34,15 @@
 		</style>
 	</head>
 	<body>
+		<%! int contador = 0; %>
 		<div id="paginaLogin">
 			<img src="img/logo_2.png" />
+			<%if (contador < 4) { contador++;%>
 			<div id="formularioLogin" >
 				<form id="login" action="Login" method="POST" >
 					<c:if test="${not empty requestScope.falhaLogin}" >
-						<div class="erro">${requestScope.falhaLogin}<br /><br /></div>		
-					</c:if>
-					
+						<div class="erro">${requestScope.falhaLogin}<br /><br /></div>	
+					</c:if>									
 					<div id="divFormulario">	
 						<div class="divLabel" >Usu&aacute;rio</div>
 						<div class="divCampo" ><input type="text" name="username" value="${param.username}" /></div>
@@ -52,7 +53,10 @@
 						<input type="submit" name="submit" id="botaoEntrar" value="Entrar" />
 					</div>
 				</form>
-			</div>							
+			</div>
+			<%} else{ %>
+				<div class="erro">Você falhou 3 vezes na tentativa de login. Seu acesso está suspenso!<br /><br /></div>
+				<%} %>										
 		</div>
 		
 		<br/>

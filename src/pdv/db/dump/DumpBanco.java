@@ -21,7 +21,7 @@ public class DumpBanco {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		System.out.println("Começo");
+		System.out.println("Comeï¿½o");
 		
 		EntityManager em = null;
 		EntityManagerFactory emf = null;
@@ -76,7 +76,7 @@ public class DumpBanco {
 			em.getTransaction().begin();
 			
 			List<String> categorias = new ArrayList();
-			categorias.add("Informática");
+			categorias.add("Informï¿½tica");
 			categorias.add("Papelaria");
 			categorias.add("Bolsas e Mochilas");
 			categorias.add("Eletro");
@@ -103,11 +103,11 @@ public class DumpBanco {
 			produtos.put("Case Camera DSLR", new Object[]{3,3,32.9,false,"Novo"});
 			produtos.put("Tablet 7\" + SD Card 8GB", new Object[]{1,10,430.0,false,"Novo"});
 			produtos.put("Lapiseira 0.7mm", new Object[]{2,20,15.9,false,"Novo"});
-			produtos.put("Tripé 60\"", new Object[]{5,5,70.0,true,"Novo"});
-			produtos.put("Óculos 3D", new Object[]{4,2,95.0,false,"Novo"});
-			produtos.put("DVD Gravável - Pack 10 und.", new Object[]{1,30,12.9,false,"Novo"});
+			produtos.put("Tripï¿½ 60\"", new Object[]{5,5,70.0,true,"Novo"});
+			produtos.put("ï¿½culos 3D", new Object[]{4,2,95.0,false,"Novo"});
+			produtos.put("DVD Gravï¿½vel - Pack 10 und.", new Object[]{1,30,12.9,false,"Novo"});
 			produtos.put("Cabo Ethernet Amarelo 3mt", new Object[]{1,10,5.9,true,"Novo"});
-			produtos.put("Notebook 14\" 2.36GHz 4GB RAM 1TB HD", new Object[]{1,1,1099.90,true,"Mostruário"});
+			produtos.put("Notebook 14\" 2.36GHz 4GB RAM 1TB HD", new Object[]{1,1,1099.90,true,"Mostruï¿½rio"});
 			produtos.put("Teclado Wireless ABNT2", new Object[]{1,1,59.0,false,"Emb. Aberta"});
 						
 			for(String nome : produtos.keySet()){

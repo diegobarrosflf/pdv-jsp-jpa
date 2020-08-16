@@ -18,7 +18,7 @@
 			<!-- Usuario do Banco de Dados. -->
 			<property name="hibernate.connection.username" value="root" />
 			<!-- Senha do Banco de Dados. -->
-			<property name="hibernate.connection.password" value="root" />
+			<property name="hibernate.connection.password" value="abcd1234" />
 			
 			<property name="hibernate.show_sql" value="true" />
 			<property name="hibernate.format_sql" value="true" />			
