@@ -36,7 +36,7 @@
 								<legend>Filtro</legend>
 								Nome&nbsp;<input type="text" name="filtroNome" value="${param.filtroNome}" />&nbsp;
 								Categoria&nbsp;
-								<select name="filtroCategoria" >
+								<select style="width:100px" name="filtroCategoria" >
 									<option value="0">Todas</option>
 									<jsp:useBean id="categoriaDAO" class="pdv.db.CategoriaDAO" />
 									<c:forEach var="c" items="${categoriaDAO.categorias}">
@@ -49,12 +49,18 @@
 								</select>&nbsp;
 								Pre&ccedil;o&nbsp;				
 								<c:set var="sel" value="selected=\"selected\"" />				
-								<select name="filtroTipoPreco" >
+								<select  name="filtroTipoPreco" >
 										<option ${param.filtroTipoPreco eq "<=" ? sel : ""} value="<=">Menor que</option>
 										<option ${param.filtroTipoPreco eq "=" ? sel : ""} value="=">Igual a </option>
 										<option ${param.filtroTipoPreco eq ">=" ? sel : ""} value=">=">Maior que</option>
 								</select>
-								<input type="text" name="filtroPreco" value="${param.filtroPreco}" />&nbsp;
+								<input style="width:100px" type="text" name="filtroPreco" value="${param.filtroPreco}" />&nbsp;
+								Promoção
+									<select name="filtroPromocao">
+										<option value=""></option>
+										<option value="1">sim</option>
+										<option value="0">não</option>
+									</select>
 								<input type="submit" name="filtrar" value="Filtrar" />
 							</fieldset>
 						</form>
@@ -67,6 +73,7 @@
 							<jsp:setProperty name="produtoDAO" property="filtroCategoria" value="${param.filtroCategoria}" />
 							<jsp:setProperty name="produtoDAO" property="filtroPreco" value="${param.filtroPreco}" />
 							<jsp:setProperty name="produtoDAO" property="filtroTipoPreco" value="${param.filtroTipoPreco}" />
+							<jsp:setProperty name="produtoDAO" property="filtroPromocao" value="${param.filtroPromocao}" />
 					</jsp:useBean>
 					
 					<form action="Produtos" method="post" >

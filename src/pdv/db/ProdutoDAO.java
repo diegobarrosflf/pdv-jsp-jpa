@@ -13,6 +13,7 @@ public class ProdutoDAO {
 	private String filtroCategoria;
 	private String filtroTipoPreco;
 	private String filtroPreco;
+	private String filtroPromocao;
 	
 	public ProdutoDAO() {
 		idProduto = 0;
@@ -20,6 +21,7 @@ public class ProdutoDAO {
 		filtroPreco = "";
 		filtroTipoPreco = "";
 		filtroCategoria = "";
+		filtroPromocao = "";
 	}
 	
 	public void setIdProduto(Integer idProduto) {
@@ -36,15 +38,18 @@ public class ProdutoDAO {
 			/* Busca Filtrada */
 			String query = "FROM Produto p WHERE 1=1 ";
 			if(!filtroNome.isEmpty()){
-				query += "AND p.nome LIKE '" + filtroNome + "%' "; // ATENÇÂO: uso de %
+				query += "AND p.nome LIKE '" + filtroNome + "%' "; // ATENï¿½ï¿½O: uso de %
 			}
 			if(!filtroPreco.isEmpty() && !filtroTipoPreco.isEmpty()){
-				/* Correção de formato de Preço */
+				/* Correï¿½ï¿½o de formato de Preï¿½o */
 				String vUnit = filtroPreco.replace('.', (char)0).replace(',', '.');
 				query += "AND p.valorUnitario " + filtroTipoPreco + " " + vUnit + " ";
 			}
 			if(!filtroCategoria.isEmpty() && !filtroCategoria.equals("0")){
 				query += "AND p.categoria = " + filtroCategoria;
+			}
+			if(!filtroPromocao.isEmpty()){
+				query += "AND p.promocao = " + filtroPromocao;
 			}
 						
 			List resultados = em.createQuery(query).getResultList();
@@ -117,7 +122,7 @@ public class ProdutoDAO {
 		return true;
 	}
 	
-	/* Seção de Getters e Setters para os filtros */
+	/* Seï¿½ï¿½o de Getters e Setters para os filtros */
 
 	public String getFiltroNome() {
 		return filtroNome;
@@ -153,6 +158,14 @@ public class ProdutoDAO {
 
 	public Integer getIdProduto() {
 		return idProduto;
+	}
+
+	public String getFiltroPromocao() {
+		return filtroPromocao;
+	}
+
+	public void setFiltroPromocao(String filtroPromocao) {
+		this.filtroPromocao = filtroPromocao;
 	}
 	
 }
